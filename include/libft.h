@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 18:05:46 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/06 16:43:26 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/06 16:49:06 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include "get_next_line.h"
 # include "ft_printf.h"
+# include "get_next_line.h"
 
 // ascii
 int		ft_isspace(int c);

@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 20:00:24 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/06 16:21:28 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/06 16:48:01 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include "libft.h"
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 20
 # endif
@@ -34,6 +35,5 @@ t_list	*new_status(t_list *s);
 int		find_char(t_list **s, char c);
 char	*substrjoin(t_list **s, size_t start, size_t end, size_t restlen);
 void	ft_bzero(void *buff, size_t len);
-size_t	ft_strlen(const char *str);
 
 #endif
