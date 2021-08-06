@@ -6,7 +6,7 @@
 #    By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/01 18:10:36 by fcaquard          #+#    #+#              #
-#    Updated: 2021/08/05 17:08:13 by fcaquard         ###   ########.fr        #
+#    Updated: 2021/08/06 12:42:22 by fcaquard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ SRCS =							\
 	$(SRC_FOLDER)ft_substr.c	\
 	$(SRC_FOLDER)ft_strlcpy.c	\
 	$(SRC_FOLDER)ft_split.c		\
+	$(SRC_FOLDER)ft_calloc.c	\
 
 
 OBJS = $(SRCS:.c=.o)
