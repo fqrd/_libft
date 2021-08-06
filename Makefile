@@ -6,7 +6,7 @@
 #    By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/01 18:10:36 by fcaquard          #+#    #+#              #
-#    Updated: 2021/08/06 12:42:22 by fcaquard         ###   ########.fr        #
+#    Updated: 2021/08/06 16:40:43 by fcaquard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,10 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 SRC_FOLDER = ./src/
-SRCS =							\
+GNL_SRC_FOLDER = ./src/get_next_line/
+PRINTF_SRC_FOLDER = ./src/ft_printf/
+
+SRCS = \
 	$(SRC_FOLDER)ft_isspace.c	\
 	$(SRC_FOLDER)ft_isalnum.c	\
 	$(SRC_FOLDER)ft_isalpha.c	\
@@ -39,8 +42,18 @@ SRCS =							\
 	$(SRC_FOLDER)ft_split.c		\
 	$(SRC_FOLDER)ft_calloc.c	\
 
+SRCS_GNL = \
+	$(GNL_SRC_FOLDER)get_next_line.c		\
+	$(GNL_SRC_FOLDER)get_next_line_utils.c	\
 
-OBJS = $(SRCS:.c=.o)
+SRCS_PRINTF = \
+	$(PRINTF_SRC_FOLDER)ft_printf_csdiuXx.c		\
+	$(PRINTF_SRC_FOLDER)ft_printf_utils.c		\
+	$(PRINTF_SRC_FOLDER)ft_printf.c				\
+
+
+
+OBJS = $(SRCS:.c=.o) $(SRCS_GNL:.c=.o) $(SRCS_PRINTF:.c=.o)
 
 all : $(NAME)
 
@@ -48,7 +61,7 @@ $(NAME): $(OBJS)
 	ar rs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(SRC_FOLDER)*.o
+	rm -f $(SRC_FOLDER)*.o $(PRINTF_SRC_FOLDER)*o $(GNL_SRC_FOLDER)*o
 
 fclean: clean
 	rm -f ./$(NAME)

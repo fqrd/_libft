@@ -6,13 +6,13 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:59:54 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/04 19:14:35 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/06 16:43:39 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-void	ft_putchar(unsigned char c)
+int	ft_putchar(unsigned char c)
 {
-	write (1, &c, 1);
+	return (write (1, &c, 1));
 }

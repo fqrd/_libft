@@ -6,13 +6,13 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 18:01:29 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/04 19:14:31 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/06 16:42:29 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-void	ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
-	write(1, s, ft_strlen(s));
+	return (write(1, s, ft_strlen(s)));
 }

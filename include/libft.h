@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 18:05:46 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/06 12:42:05 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/06 16:43:26 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
+# include "get_next_line.h"
+# include "ft_printf.h"
 
 // ascii
 int		ft_isspace(int c);
@@ -35,16 +38,16 @@ char	*ft_itoa(int n);
 
 // print
 void	ft_putnbr(long long nb);
-void	ft_putchar(unsigned char c);
-void	ft_putstr(char *s);
+int		ft_putchar(unsigned char c);
+int		ft_putstr(char *s);
 
-// sizes
+// sizes/counters
 size_t	ft_strlen(const char *str);
 size_t	ft_intlen(long long d);
+size_t	ft_countchar(char *str, char c);
 
 // math
 int		ft_power(int nb, int power);
-size_t	ft_countchar(char *str, char c);
 
 // strings
 char	*ft_strtrim(char const *s1, char const *set);
@@ -54,4 +57,5 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 // memory
 void	*ft_calloc(size_t nmemb, size_t size);
+
 #endif
