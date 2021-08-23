@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 18:05:46 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/06 16:49:06 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/23 23:56:02 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int		ft_putstr(char *s);
 size_t	ft_strlen(const char *str);
 size_t	ft_intlen(long long d);
 size_t	ft_countchar(char *str, char c);
+size_t	ft_charpos(char *str, char c);
 
 // math
 int		ft_power(int nb, int power);
