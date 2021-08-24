@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 20:00:24 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/06 16:48:01 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/24 21:53:32 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdio.h>
 # include "libft.h"
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 20
+#  define BUFFER_SIZE 1000
 # endif
 
 typedef struct s_list
