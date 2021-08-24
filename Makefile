@@ -6,7 +6,7 @@
 #    By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/01 18:10:36 by fcaquard          #+#    #+#              #
-#    Updated: 2021/08/23 23:56:28 by fcaquard         ###   ########.fr        #
+#    Updated: 2021/08/24 19:03:21 by fcaquard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ SRCS = \
 	$(SRC_FOLDER)ft_strlcpy.c	\
 	$(SRC_FOLDER)ft_split.c		\
 	$(SRC_FOLDER)ft_calloc.c	\
+	$(SRC_FOLDER)ft_atoi_hex.c	\
 
 SRCS_GNL = \
 	$(GNL_SRC_FOLDER)get_next_line.c		\

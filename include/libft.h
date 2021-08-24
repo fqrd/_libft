@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 18:05:46 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/23 23:56:02 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/24 19:03:39 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int		ft_toupper(int c);
 // type change
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
+int		ft_atoi_hex(char *str);
 
 // print
 void	ft_putnbr(long long nb);
