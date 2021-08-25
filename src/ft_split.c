@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 18:34:49 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/24 23:18:38 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/25 13:02:31 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,41 +26,34 @@ static size_t	ft_count_splits(char *str, char c)
 		while (str[i] && str[i] == c)
 			i++;
 		if (str[i])
+		{
 			count++;
+		}
 		while (str[i] && str[i] != c)
 			i++;
 	}
 	return (count);
 }
 
-// static char	*trimmer(char *str, char c)
-// {
-// 	int	start;
-// 	int	end;
-
-// 	if (!str)
-// 		return (NULL);
-// 	start = 0;
-// 	end = ft_strlen(str) - 1;
-// 	while (start <= end && str[start] && str[start] == c)
-// 		start++;
-// 	while (end >= 0 && str[end] && str[end] == c)
-// 		end--;
-// 	return (ft_substr(str, start, ((end + 1) - start)));
-// }
-
-static char	**cmalloc(char *sub, char **arr, size_t cell)
+static int	clearm(char **arr, size_t cell)
 {
-	arr[cell] = sub;
-	if (!arr[cell])
-	{
-		arr = arr - cell;
-		while (*arr)
-			free(*arr++);
-		free(arr);
-		return (NULL);
-	}
-	return (arr);
+	arr = arr - cell;
+	while (*arr)
+		free(*arr++);
+	free(arr);
+	return (0);
+}
+
+static int	assign(char ***array, size_t *cell, char *position, int len)
+{
+	char	*dest;
+
+	dest = malloc(sizeof(char) * len);
+	if (!dest)
+		return (clearm(*array, *cell));
+	ft_strlcpy(dest, position, len);
+	(*array)[(*cell)++] = dest;
+	return (1);
 }
 
 static char	**split(char **array, char *str, unsigned char c)
@@ -69,26 +62,22 @@ static char	**split(char **array, char *str, unsigned char c)
 	size_t	start;
 	size_t	cell;
 
-	cell = 0;
 	i = 0;
-	while (str[i] && str[i] == c)
-		i++;
-	start = i;
+	cell = 0;
+	start = 0;
 	while (str[i])
 	{
-		if (str[i] && str[i] == c)
+		while (str[i] && str[i] == c)
+			i++;
+		start = i;
+		if (str[i])
 		{
-			if (!cmalloc(ft_substr(str, start, (i - start)), array, cell))
-				return (NULL);
-			cell++;
-			while (str[i] && str[i] == c)
+			while (str[i] && str[i] != c)
 				i++;
-			start = i;
+			if (!assign(&array, &cell, str + start, (i - start) + 1))
+				return (NULL);
 		}
-		i++;
 	}
-	if (!cmalloc(ft_substr(str, start, (i - start)), array, cell))
-		return (NULL);
 	return (array);
 }
 
