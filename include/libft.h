@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 18:05:46 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/24 19:03:39 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/08/26 14:28:01 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int		ft_putstr(char *s);
 // sizes/counters
 size_t	ft_strlen(const char *str);
 size_t	ft_intlen(long long d);
+size_t	ft_arrlen(char **array);
 size_t	ft_countchar(char *str, char c);
 size_t	ft_charpos(char *str, char c);
 

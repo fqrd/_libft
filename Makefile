@@ -6,7 +6,7 @@
 #    By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/01 18:10:36 by fcaquard          #+#    #+#              #
-#    Updated: 2021/08/24 19:03:21 by fcaquard         ###   ########.fr        #
+#    Updated: 2021/08/26 14:28:18 by fcaquard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRCS = \
 	$(SRC_FOLDER)ft_putstr.c	\
 	$(SRC_FOLDER)ft_strlen.c	\
 	$(SRC_FOLDER)ft_intlen.c	\
+	$(SRC_FOLDER)ft_arrlen.c	\
 	$(SRC_FOLDER)ft_power.c		\
 	$(SRC_FOLDER)ft_countchar.c	\
 	$(SRC_FOLDER)ft_charpos.c	\
