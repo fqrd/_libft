@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 20:00:07 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/10/28 13:29:19 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/10/28 19:18:10 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char	*substrjoin(t_list **s, size_t start, size_t len, size_t restlen)
 	return (output);
 }
 
-char	*setValue(t_list **s, int res)
+char	*set_value(t_list **s, int res)
 {
 	if (res == 1)
 		return ((*s)->line);
