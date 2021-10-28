@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 20:00:17 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/10/28 13:35:27 by fcaquard         ###   ########.fr       */
+/*   Updated: 2021/10/28 13:40:20 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static int	action_on_buffer(t_list **s)
 	}
 }
 
-static char	*load_buffer(int fd, t_list **s)
+static int	load_buffer(int fd, t_list **s)
 {
 	int	res;
 
