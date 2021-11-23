@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_csdiuXx.c                                :+:      :+:    :+:   */
+/*   ft_printf_csdiux.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -50,13 +50,13 @@ void	ft_hexadecimal_number(va_list args, size_t **count, char format)
 {
 	unsigned int	x;
 	char			*base_x;
-	char			*base_X;
+	char			*base_capital_x;
 
 	base_x = "0123456789abcdef";
-	base_X = "0123456789ABCDEF";
+	base_capital_x = "0123456789ABCDEF";
 	x = va_arg(args, unsigned int);
 	if (format == 'x')
 		**count += to_hex_long((unsigned long long)x, base_x, 0);
 	else
-		**count += to_hex_long((unsigned long long)x, base_X, 0);
+		**count += to_hex_long((unsigned long long)x, base_capital_x, 0);
 }
