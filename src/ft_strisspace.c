@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_charpos.c                                       :+:      :+:    :+:   */
+/*   ft_strisspace.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 23:54:00 by fcaquard          #+#    #+#             */
-/*   Updated: 2022/04/08 19:30:15 by fcaquard         ###   ########.fr       */
+/*   Created: 2022/04/08 19:32:14 by fcaquard          #+#    #+#             */
+/*   Updated: 2022/04/08 19:33:35 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-// return the char position on success
-// returns -1 if not found
-int	ft_charpos(char *str, char c)
+// checks that the string provided is only made of spaces characters
+// returns 1 on success / 0 on error
+int	ft_strisspace(char *str)
 {
-	int	i;
+	size_t	i;
 
-	i = 0;
+	if (!str)
+		return (0);
 	while (str && str[i])
 	{
-		if (str[i] == c)
-			return (i);
+		if (!ft_isspace(str[i]))
+			return (0);
 		i++;
 	}
-	return (-1);
+	return (1);
 }

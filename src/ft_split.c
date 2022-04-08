@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 18:34:49 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/25 13:02:31 by fcaquard         ###   ########.fr       */
+/*   Updated: 2022/04/08 20:02:08 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,11 @@ static size_t	ft_count_splits(char *str, char c)
 		while (str[i] && str[i] == c)
 			i++;
 		if (str[i])
-		{
 			count++;
-		}
 		while (str[i] && str[i] != c)
 			i++;
 	}
 	return (count);
-}
-
-static int	clearm(char **arr, size_t cell)
-{
-	arr = arr - cell;
-	while (*arr)
-		free(*arr++);
-	free(arr);
-	return (0);
 }
 
 static int	assign(char ***array, size_t *cell, char *position, int len)
@@ -50,7 +39,7 @@ static int	assign(char ***array, size_t *cell, char *position, int len)
 
 	dest = malloc(sizeof(char) * len);
 	if (!dest)
-		return (clearm(*array, *cell));
+		return (ft_clear_array(*array, *cell));
 	ft_strlcpy(dest, position, len);
 	(*array)[(*cell)++] = dest;
 	return (1);
@@ -96,8 +85,6 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	array[n] = NULL;
 	if (n)
-		array = split(array, ps, c);
-	if (!array)
-		return (NULL);
+		return (split(array, ps, c));
 	return (array);
 }

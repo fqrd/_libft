@@ -6,7 +6,7 @@
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 14:26:48 by fcaquard          #+#    #+#             */
-/*   Updated: 2021/08/26 14:27:55 by fcaquard         ###   ########.fr       */
+/*   Updated: 2022/04/08 19:23:44 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ size_t	ft_arrlen(char **array)
 	size_t	i;
 
 	i = 0;
-	if (!array)
-		return (i);
-	while (array[i])
+	while (array && array[i])
 		i++;
-	return (i - 1);
+	return (i);
 }

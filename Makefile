@@ -6,7 +6,7 @@
 #    By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/01 18:10:36 by fcaquard          #+#    #+#              #
-#    Updated: 2021/08/26 14:28:18 by fcaquard         ###   ########.fr        #
+#    Updated: 2022/04/08 19:58:26 by fcaquard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,14 @@ SRCS = \
 	$(SRC_FOLDER)ft_strlcpy.c	\
 	$(SRC_FOLDER)ft_split.c		\
 	$(SRC_FOLDER)ft_calloc.c	\
-	$(SRC_FOLDER)ft_atoi_hex.c	\
+	$(SRC_FOLDER)ft_strcompare.c	\
+	$(SRC_FOLDER)ft_strcopy.c		\
+	$(SRC_FOLDER)ft_strisalnum.c	\
+	$(SRC_FOLDER)ft_strisalpha.c	\
+	$(SRC_FOLDER)ft_strisdigit.c	\
+	$(SRC_FOLDER)ft_strisspace.c	\
+	$(SRC_FOLDER)ft_substr_f.c		\
+	$(SRC_FOLDER)ft_clear_array.c	\
 
 SRCS_GNL = \
 	$(GNL_SRC_FOLDER)get_next_line.c		\
@@ -53,8 +60,6 @@ SRCS_PRINTF = \
 	$(PRINTF_SRC_FOLDER)ft_printf_csdiuXx.c		\
 	$(PRINTF_SRC_FOLDER)ft_printf_utils.c		\
 	$(PRINTF_SRC_FOLDER)ft_printf.c				\
-
-
 
 OBJS = $(SRCS:.c=.o) $(SRCS_GNL:.c=.o) $(SRCS_PRINTF:.c=.o)
 

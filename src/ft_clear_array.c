@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_charpos.c                                       :+:      :+:    :+:   */
+/*   ft_clear_array.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcaquard <fcaquard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 23:54:00 by fcaquard          #+#    #+#             */
-/*   Updated: 2022/04/08 19:30:15 by fcaquard         ###   ########.fr       */
+/*   Created: 2022/04/08 19:42:29 by fcaquard          #+#    #+#             */
+/*   Updated: 2022/04/08 19:52:46 by fcaquard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-// return the char position on success
-// returns -1 if not found
-int	ft_charpos(char *str, char c)
+// frees the malloc'd array and its content
+// clear_array(array, ft_arrlen(array));
+// return 0
+int	ft_clear_array(char **array, size_t len)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (str && str[i])
+	while (i < len)
 	{
-		if (str[i] == c)
-			return (i);
+		free(array[i]);
+		array[i] = NULL;
 		i++;
 	}
-	return (-1);
+	free(array);
+	array = NULL;
+	return (0);
 }
